@@ -1,0 +1,4 @@
+-- Optional demo data. Passwords must be hashed by the app, so register users through the UI.
+-- Example report row (replace user_id with a real user id):
+-- INSERT INTO reports (user_id, language, code, bugs_json, corrected_code, severity)
+-- VALUES (1, 'Python', 'print(x)', '[{"line":1,"type":"runtime","severity":"high","title":"Undefined variable","explanation":"x is never defined.","fix":"Define x first."}]', 'x = 1\nprint(x)', 'high');

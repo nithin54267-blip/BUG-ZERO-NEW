@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BUG-ZERO: find bugs in any language</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;800&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="nav"><a class="logo" href="index.html">BUG<b>-</b>ZERO</a>
+  <div class="nav-links"><a href="login.html">Log in</a><a class="btn" href="register.html">Create account</a></div></nav>
+<main>
+<section class="hero">
+  <div>
+    <h1>Paste code. Get the bugs, the reasons and the fix.</h1>
+    <p>BUG-ZERO reads code in Python, Java, C, JavaScript, PHP, SQL and more, explains each bug in plain language, and hands back a corrected version.</p>
+    <div class="actions"><a class="btn" href="register.html">Start finding bugs</a><a class="btn ghost" href="login.html">I have an account</a></div>
+  </div>
+  <div class="demo" aria-label="Example bug report">
+    <span class="ln"><i>1</i>def average(nums):</span>
+    <span class="ln"><i>2</i>    total = 0</span>
+    <span class="ln"><i>3</i>    for n in nums:</span>
+    <span class="ln"><i>4</i>        total += n</span>
+    <span class="ln hit"><i>5</i>    return total / len(nums)</span>
+    <div class="tip"><strong>Runtime, high:</strong> an empty list divides by zero. Check <code>len(nums)</code> before dividing.</div>
+  </div>
+</section>
+<section class="features">
+  <div><h3>Any language</h3><p>No separate linter for each language. One place for all your code.</p></div>
+  <div><h3>Explained, not just flagged</h3><p>Every bug has a type, a severity, a plain reason and a fix.</p></div>
+  <div><h3>Your history, saved</h3><p>Reopen, search and delete earlier reports from your own account.</p></div>
+</section>
+</main>
+<footer>BUG-ZERO, built with Flask, SQL and an LLM API.</footer>
+</body></html>

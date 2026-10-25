@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Editor | BUG-ZERO</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;800&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"></head>
+<body>
+<nav class="nav"><a class="logo" href="dashboard.html">BUG<b>-</b>ZERO</a>
+  <div class="nav-links"><a class="active" href="dashboard.html">Editor</a><a href="history.html">History</a><span id="nav-user"></span></div></nav>
+<main class="workspace">
+  <section class="panel" aria-label="Code editor">
+    <div class="panel-head"><h2>Your code</h2>
+      <select id="language" aria-label="Language"><option value="">Auto-detect language</option></select>
+      <label class="btn ghost" style="margin:0;cursor:pointer">Upload file<input id="file" type="file" hidden></label>
+      <button class="btn" id="find" type="button">Find bugs</button></div>
+    <div class="problem">
+      <label for="problem">Problem statement <span>(optional: paste the task your code should solve)</span></label>
+      <textarea id="problem" rows="4" maxlength="5000" placeholder="Example: Write a function that returns the average of a list of numbers. It must return 0 for an empty list."></textarea>
+    </div>
+    <div class="panel-body" id="editor"></div>
+  </section>
+  <section class="panel" aria-label="Bug report">
+    <div class="panel-head"><h2>Bug report</h2></div>
+    <div class="panel-body results" id="results" aria-live="polite"><div class="empty">Your results will appear here. Paste code on the left and select Find bugs.</div></div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/display/placeholder.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/php/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/sql/sql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/go/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/rust/rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/ruby/ruby.min.js"></script>
+<script src="js/api.js"></script><script src="js/editor.js"></script><script src="js/analyze.js"></script>
+</body></html>
